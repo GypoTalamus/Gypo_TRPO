@@ -37,7 +37,7 @@ namespace MasterMind
 
             //Otgadka = Int32.Parse(textBox1.Text);
 
-            button2.Text = " " + Otgadka + " ";
+            //button2.Text = " " + Otgadka + " ";
 
             //richTextBox1.Text = "Ход " + StartNumber + ": Быки = " + Byki + ", Коровы = " + Korovy + "\r\n";
             richTextBox1.AppendText("Ход " + Counter + ": Быки = " + Byki + ", Коровы = " + Korovy + "\r\n");
