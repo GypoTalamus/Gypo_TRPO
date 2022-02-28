@@ -1,0 +1,10 @@
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\MasterMind.exe.config
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\MasterMind.exe
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\MasterMind.pdb
+E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.csproj.AssemblyReference.cache
+E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.Form1.resources
+E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.Properties.Resources.resources
+E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.csproj.GenerateResource.cache
+E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.csproj.CoreCompileInputs.cache
+E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.exe
+E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.pdb
