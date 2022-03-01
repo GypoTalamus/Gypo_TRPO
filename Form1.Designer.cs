@@ -121,9 +121,9 @@ namespace MasterMind
             // 
             this.mtbInputOtgadka.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mtbInputOtgadka.Location = new System.Drawing.Point(247, 108);
-            this.mtbInputOtgadka.Mask = "0000";
+            this.mtbInputOtgadka.Mask = "000000";
             this.mtbInputOtgadka.Name = "mtbInputOtgadka";
-            this.mtbInputOtgadka.Size = new System.Drawing.Size(60, 34);
+            this.mtbInputOtgadka.Size = new System.Drawing.Size(144, 34);
             this.mtbInputOtgadka.TabIndex = 15;
             this.mtbInputOtgadka.ValidatingType = typeof(int);
             // 
@@ -210,16 +210,17 @@ namespace MasterMind
             this.buttonLevelHard.TabIndex = 3;
             this.buttonLevelHard.Text = "Сложный";
             this.buttonLevelHard.UseVisualStyleBackColor = true;
+            this.buttonLevelHard.Click += new System.EventHandler(this.buttonLevelHard_Click);
             // 
             // buttonLevelMiddle
             // 
-            this.buttonLevelMiddle.Enabled = false;
             this.buttonLevelMiddle.Location = new System.Drawing.Point(20, 150);
             this.buttonLevelMiddle.Name = "buttonLevelMiddle";
             this.buttonLevelMiddle.Size = new System.Drawing.Size(85, 38);
             this.buttonLevelMiddle.TabIndex = 2;
             this.buttonLevelMiddle.Text = "Обычный";
             this.buttonLevelMiddle.UseVisualStyleBackColor = true;
+            this.buttonLevelMiddle.Click += new System.EventHandler(this.buttonLevelMiddle_Click);
             // 
             // buttonLevelEasy
             // 
