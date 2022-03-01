@@ -20,41 +20,46 @@ namespace MasterMind
 
         int Byki = 0;
         int Korovy = 0;
-        int val, val1, val2, val3;
+        //int val, val1, val2, val3;
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonLevelEasy_Click(object sender, EventArgs e)
         {
-            panel1.Visible = false;
-            StartNumber = new int[4];
-            Otgadka = new int[4];
+            panelLevelSelect.Visible = false;
+            Level = 4;
+            StartNumber = new int[Level];
+            Otgadka = new int[Level];
             Score = 10;
+            labelLevel.Text = Level + " ";
+            labelScorePoint.Text = Score + " ";
         }
 
-        private void button2_Click(object sender, EventArgs e) //кнопка Угадать
+        private void buttonPopytka_Click(object sender, EventArgs e) //кнопка Угадать
         {
-            richTextBox1.AppendText("Ход " + Counter + ": Быки = " + Byki + ", Коровы = " + Korovy + "\r\n");
+            rtbChat.AppendText("Ход " + Counter + ": Быки = " + Byki + ", Коровы = " + Korovy + "\r\n");
             Counter += 1;
-            richTextBox1.ScrollToCaret();
-
+            rtbChat.ScrollToCaret();
+            Score -= 1;
+            labelScorePoint.Text = Score + " ";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonStart_Click(object sender, EventArgs e)
         {
          
-            GenSetN(4, 10, StartNumber);
+            GenSetN(Level, 10, StartNumber);
 
-            richTextBox1.AppendText("Ход " + Counter + ": Быки = " + Byki + ", Коровы = " + Korovy + "\r\n");
+            rtbChat.AppendText("Ход " + Counter + ": Быки = " + Byki + ", Коровы = " + Korovy + "\r\n");
             //button1.Visible = false;
             //button2.Visible = true;
             Counter += 1;
-            //label8.Text = StartNumber[0] + " " + StartNumber[1] + " " + StartNumber[2] + " " + StartNumber[3];
-            richTextBox1.ScrollToCaret();
-
+            label1.Text = StartNumber[0] + " " + StartNumber[1] + " " + StartNumber[2] + " " + StartNumber[3];
+            rtbChat.ScrollToCaret();
+            labelInputOtgadka.Visible = true;
+            mtbInputOtgadka.Visible = true;
         }
 
         // Генератор множества Nq не повторяющихся 
@@ -79,6 +84,43 @@ namespace MasterMind
                     k++;
                 }
             }
+        }
+
+        // Сравнение заданного и введенного чисел 
+        static int BullsAndСows(int[] a, int[] b, int[,] d)
+        {
+            int k = 0;
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    if (a[i] == b[j])
+                    {
+                        d[k, 1] = a[i];
+                        if (i == j)
+                            d[k, 0] = 2;
+                        else
+                            d[k, 0] = 1;
+                        k++;
+                    }
+                }
+            }
+            return k;
+        }
+
+        // Сравнение на чистое совпадение
+        static bool NumberCompare(int[] a, int[] b)
+        {
+            bool d = true;
+            for (int i = 0; i < 4; i++)
+            {
+                if (a[i] != b[i])
+                {
+                    d = false;
+                    break;
+                }
+            }
+            return d;
         }
 
 
