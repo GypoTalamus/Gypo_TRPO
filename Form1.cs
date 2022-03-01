@@ -20,7 +20,6 @@ namespace MasterMind
 
         int Bulls = 0;
         int Cows = 0;
-        //int val, val1, val2, val3;
 
         public Form1()
         {
@@ -37,6 +36,7 @@ namespace MasterMind
             labelLevel.Text = Level + " ";
             labelScorePoint.Text = Score + " ";
             mtbInputOtgadka.Mask = "0000";
+            Counter = 1;
         }
 
         private void buttonLevelMiddle_Click(object sender, EventArgs e)
@@ -49,6 +49,7 @@ namespace MasterMind
             labelLevel.Text = Level + " ";
             labelScorePoint.Text = Score + " ";
             mtbInputOtgadka.Mask = "000000";
+            Counter = 1;
         }
 
         private void buttonLevelHard_Click(object sender, EventArgs e)
@@ -61,6 +62,7 @@ namespace MasterMind
             labelLevel.Text = Level + " ";
             labelScorePoint.Text = Score + " ";
             mtbInputOtgadka.Mask = "00000000";
+            Counter = 1;
         }
 
         private void buttonPopytka_Click(object sender, EventArgs e) //кнопка Угадать
@@ -79,16 +81,9 @@ namespace MasterMind
                     Otgadka[it] = Convert.ToInt32(c - 48);
             }
 
-            //int nAnswers = 1;
-            //while (nAnswers <= Score)
-            //{
-                //for (int und = 0; und < Level; und++)
-                //{
-                //if (Otgadka[und])  // ответ
                 if (NumberCompare(StartNumber, Otgadka))
                 {
                     rtbChat.AppendText("Вы угадали число " + InputOtgadka + " c " + Counter + " попытки!");
-                //Console.WriteLine("Вы угадали число c {0} попытки!", nAnswers);
                 buttonStart.Visible = true;
                 buttonPopytka.Visible = false;
                 
@@ -96,62 +91,42 @@ namespace MasterMind
                 }
 
 
-                int[,] Analyze = new int[4, 2];
+                int[,] Analyze = new int[Level, 2];
                 // угаданная цифра Analyze[i,1], бык(Analyze[i,0]=2) корова(Analyze[i,0]=1)
                 // АНАЛИЗ. CountAnswer - число угаданных цифр
                 int CountAnswer = BullsAndСows(StartNumber, Otgadka, Analyze);
-                for (int i = 0; i < CountAnswer; i++)
-                {
-                    Console.WriteLine(Analyze[i, 0] + " , " + Analyze[i, 1]);
-                    if (Analyze[i, 0] == 1)
-                    {
-                        //Cows += 1;
-                        Console.WriteLine("КОРОВА ({0})", Analyze[i, 1]);
-                    }
-                    else
-                    {
-                        //Bulls += 1;
-                        Console.WriteLine("БЫК ({0})", Analyze[i, 1]);
-                    }
-                }
 
 
             if (CountAnswer == 0)
             {
                 rtbChat.AppendText("Ход " + Counter + ". В Вашем числе " + InputOtgadka + " нет загаданных цифр..." + "\r\n");
-                Counter += 1;
+                Counter++;
                 rtbChat.ScrollToCaret();
-                //Console.WriteLine("Ход " + Counter + ". В Вашем числе " + InputOtgadka + " нет загаданных цифр...");
             }
-            //nAnswers++;
             else
             {
                 rtbChat.AppendText("Ход " + Counter + ". Число " + InputOtgadka + ". Быки = " + Bulls + ", Коровы = " + Cows + "\r\n");
-                Counter += 1;
+                Counter++;
                 rtbChat.ScrollToCaret();
             }
-            //}
-
-            //rtbChat.AppendText("Ход " + Counter + ". Число " + InputOtgadka + ". Быки = " + Bulls + ", Коровы = " + Cows + "\r\n");
-            //Counter += 1;
-            //rtbChat.ScrollToCaret();
-
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
             rtbChat.Clear();
             mtbInputOtgadka.Text = "";
+            label1.Text = "";
             GenSetN(Level, 10, StartNumber);
 
-            //rtbChat.AppendText("Ход " + Counter + ": Быки = " + Bulls + ", Коровы = " + Cows + "\r\n");
             buttonStart.Visible = false;
             buttonPopytka.Visible = true;
-            //Counter += 1;
-            label1.Text = StartNumber[0] + " " + StartNumber[1] + " " + StartNumber[2] + " " + StartNumber[3];
-            //rtbChat.ScrollToCaret();
+            for (int il = 0; il < Level; il++)
+            {
+                label1.Text += StartNumber[il] + " ";
+            }
             labelInputOtgadka.Visible = true;
             mtbInputOtgadka.Visible = true;
+            Counter = 1;
         }
 
         // Генератор множества Nq не повторяющихся 
@@ -182,9 +157,9 @@ namespace MasterMind
         private int BullsAndСows(int[] a, int[] b, int[,] d)
         {
             int k = 0;
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < Level; i++)
             {
-                for (int j = 0; j < 4; j++)
+                for (int j = 0; j < Level; j++)
                 {
                     if (a[i] == b[j])
                     {
@@ -207,10 +182,10 @@ namespace MasterMind
         }
 
         // Сравнение на чистое совпадение
-        static bool NumberCompare(int[] a, int[] b)
+        private bool NumberCompare(int[] a, int[] b)
         {
             bool d = true;
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < Level; i++)
             {
                 if (a[i] != b[i])
                 {
@@ -221,6 +196,9 @@ namespace MasterMind
             return d;
         }
 
-        
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

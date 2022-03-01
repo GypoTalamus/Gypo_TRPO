@@ -48,13 +48,21 @@ namespace MasterMind
             this.buttonLevelEasy = new System.Windows.Forms.Button();
             this.labelLevelSelect = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.новаяИграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.легкаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обычнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сложнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelLevelSelect.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonPopytka
             // 
             this.buttonPopytka.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonPopytka.Location = new System.Drawing.Point(13, 425);
+            this.buttonPopytka.Location = new System.Drawing.Point(13, 448);
             this.buttonPopytka.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPopytka.Name = "buttonPopytka";
             this.buttonPopytka.Size = new System.Drawing.Size(95, 64);
@@ -67,7 +75,7 @@ namespace MasterMind
             // 
             this.labelLevelTextUp.AutoSize = true;
             this.labelLevelTextUp.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLevelTextUp.Location = new System.Drawing.Point(13, 9);
+            this.labelLevelTextUp.Location = new System.Drawing.Point(8, 47);
             this.labelLevelTextUp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLevelTextUp.Name = "labelLevelTextUp";
             this.labelLevelTextUp.Size = new System.Drawing.Size(378, 26);
@@ -78,7 +86,7 @@ namespace MasterMind
             // 
             this.labelLevelTextDown.AutoSize = true;
             this.labelLevelTextDown.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLevelTextDown.Location = new System.Drawing.Point(13, 35);
+            this.labelLevelTextDown.Location = new System.Drawing.Point(8, 73);
             this.labelLevelTextDown.Name = "labelLevelTextDown";
             this.labelLevelTextDown.Size = new System.Drawing.Size(297, 26);
             this.labelLevelTextDown.TabIndex = 6;
@@ -88,7 +96,7 @@ namespace MasterMind
             // 
             this.labelInputOtgadka.AutoSize = true;
             this.labelInputOtgadka.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelInputOtgadka.Location = new System.Drawing.Point(12, 116);
+            this.labelInputOtgadka.Location = new System.Drawing.Point(13, 146);
             this.labelInputOtgadka.Name = "labelInputOtgadka";
             this.labelInputOtgadka.Size = new System.Drawing.Size(147, 26);
             this.labelInputOtgadka.TabIndex = 7;
@@ -97,7 +105,7 @@ namespace MasterMind
             // rtbChat
             // 
             this.rtbChat.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rtbChat.Location = new System.Drawing.Point(13, 155);
+            this.rtbChat.Location = new System.Drawing.Point(13, 178);
             this.rtbChat.Name = "rtbChat";
             this.rtbChat.ReadOnly = true;
             this.rtbChat.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
@@ -108,7 +116,7 @@ namespace MasterMind
             // buttonStart
             // 
             this.buttonStart.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStart.Location = new System.Drawing.Point(298, 425);
+            this.buttonStart.Location = new System.Drawing.Point(298, 448);
             this.buttonStart.Margin = new System.Windows.Forms.Padding(4);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(95, 64);
@@ -120,7 +128,7 @@ namespace MasterMind
             // mtbInputOtgadka
             // 
             this.mtbInputOtgadka.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mtbInputOtgadka.Location = new System.Drawing.Point(247, 108);
+            this.mtbInputOtgadka.Location = new System.Drawing.Point(247, 138);
             this.mtbInputOtgadka.Mask = "000000";
             this.mtbInputOtgadka.Name = "mtbInputOtgadka";
             this.mtbInputOtgadka.Size = new System.Drawing.Size(144, 34);
@@ -131,7 +139,7 @@ namespace MasterMind
             // 
             this.labelScoreText.AutoSize = true;
             this.labelScoreText.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelScoreText.Location = new System.Drawing.Point(13, 73);
+            this.labelScoreText.Location = new System.Drawing.Point(8, 102);
             this.labelScoreText.Name = "labelScoreText";
             this.labelScoreText.Size = new System.Drawing.Size(76, 26);
             this.labelScoreText.TabIndex = 16;
@@ -141,7 +149,7 @@ namespace MasterMind
             // 
             this.labelScorePoint.AutoSize = true;
             this.labelScorePoint.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelScorePoint.Location = new System.Drawing.Point(242, 73);
+            this.labelScorePoint.Location = new System.Drawing.Point(242, 102);
             this.labelScorePoint.Name = "labelScorePoint";
             this.labelScorePoint.Size = new System.Drawing.Size(24, 26);
             this.labelScorePoint.TabIndex = 17;
@@ -151,7 +159,7 @@ namespace MasterMind
             // 
             this.labelLevel.AutoSize = true;
             this.labelLevel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLevel.Location = new System.Drawing.Point(200, 9);
+            this.labelLevel.Location = new System.Drawing.Point(191, 47);
             this.labelLevel.Name = "labelLevel";
             this.labelLevel.Size = new System.Drawing.Size(33, 26);
             this.labelLevel.TabIndex = 18;
@@ -203,7 +211,6 @@ namespace MasterMind
             // 
             // buttonLevelHard
             // 
-            this.buttonLevelHard.Enabled = false;
             this.buttonLevelHard.Location = new System.Drawing.Point(20, 249);
             this.buttonLevelHard.Name = "buttonLevelHard";
             this.buttonLevelHard.Size = new System.Drawing.Size(85, 37);
@@ -246,15 +253,70 @@ namespace MasterMind
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(628, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 18);
+            this.label1.Size = new System.Drawing.Size(0, 18);
             this.label1.TabIndex = 20;
-            this.label1.Text = "label1";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.новаяИграToolStripMenuItem,
+            this.справкаToolStripMenuItem,
+            this.ExitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1061, 24);
+            this.menuStrip1.TabIndex = 21;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // новаяИграToolStripMenuItem
+            // 
+            this.новаяИграToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.легкаяToolStripMenuItem,
+            this.обычнаяToolStripMenuItem,
+            this.сложнаяToolStripMenuItem});
+            this.новаяИграToolStripMenuItem.Name = "новаяИграToolStripMenuItem";
+            this.новаяИграToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.новаяИграToolStripMenuItem.Text = "Новая игра";
+            // 
+            // легкаяToolStripMenuItem
+            // 
+            this.легкаяToolStripMenuItem.Name = "легкаяToolStripMenuItem";
+            this.легкаяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.легкаяToolStripMenuItem.Text = "Легкая";
+            this.легкаяToolStripMenuItem.Click += new System.EventHandler(this.buttonLevelEasy_Click);
+            // 
+            // обычнаяToolStripMenuItem
+            // 
+            this.обычнаяToolStripMenuItem.Name = "обычнаяToolStripMenuItem";
+            this.обычнаяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.обычнаяToolStripMenuItem.Text = "Обычная";
+            this.обычнаяToolStripMenuItem.Click += new System.EventHandler(this.buttonLevelMiddle_Click);
+            // 
+            // сложнаяToolStripMenuItem
+            // 
+            this.сложнаяToolStripMenuItem.Name = "сложнаяToolStripMenuItem";
+            this.сложнаяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сложнаяToolStripMenuItem.Text = "Сложная";
+            this.сложнаяToolStripMenuItem.Click += new System.EventHandler(this.buttonLevelHard_Click);
+            // 
+            // справкаToolStripMenuItem
+            // 
+            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.справкаToolStripMenuItem.Text = "Справка";
+            // 
+            // ExitToolStripMenuItem
+            // 
+            this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.ExitToolStripMenuItem.Text = "Выход";
+            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1061, 492);
+            this.ClientSize = new System.Drawing.Size(1061, 525);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelLevelSelect);
             this.Controls.Add(this.labelLevel);
@@ -267,12 +329,16 @@ namespace MasterMind
             this.Controls.Add(this.labelLevelTextDown);
             this.Controls.Add(this.labelLevelTextUp);
             this.Controls.Add(this.buttonPopytka);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panelLevelSelect.ResumeLayout(false);
             this.panelLevelSelect.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,6 +364,13 @@ namespace MasterMind
         private System.Windows.Forms.RichTextBox rtbHintHard;
         private System.Windows.Forms.RichTextBox rtbHintMiddle;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem новаяИграToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem легкаяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem обычнаяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сложнаяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
     }
 }
 
