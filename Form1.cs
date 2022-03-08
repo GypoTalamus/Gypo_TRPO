@@ -15,8 +15,9 @@ namespace MasterMind
         int[] StartNumber;  // загадываемое число
         int[] Otgadka;  // Ваш ответ
         int Counter = 1; //Счётчик ответов
-        int Score; //Счётчик очков
+        int Score; //Количество очков сложности
         int Level; //Сложность игры
+        int ScorePoint;//Счётчик очков
 
         int Bulls = 0;
         int Cows = 0;
@@ -24,11 +25,13 @@ namespace MasterMind
         public Form1()
         {
             InitializeComponent();
+            panelLevelSelect.Visible = true;
         }
 
         private void buttonLevelEasy_Click(object sender, EventArgs e)
         {
             panelLevelSelect.Visible = false;
+            panel1.Visible = true;
             Level = 4;
             StartNumber = new int[Level];
             Otgadka = new int[Level];
@@ -42,6 +45,7 @@ namespace MasterMind
         private void buttonLevelMiddle_Click(object sender, EventArgs e)
         {
             panelLevelSelect.Visible = false;
+            panel1.Visible = true;
             Level = 6;
             StartNumber = new int[Level];
             Otgadka = new int[Level];
@@ -55,6 +59,7 @@ namespace MasterMind
         private void buttonLevelHard_Click(object sender, EventArgs e)
         {
             panelLevelSelect.Visible = false;
+            panel1.Visible = true;
             Level = 8;
             StartNumber = new int[Level];
             Otgadka = new int[Level];
@@ -69,27 +74,27 @@ namespace MasterMind
         {
             Bulls = 0;
             Cows = 0;
-            
-            Score -= 1;
-            labelScorePoint.Text = Score + " ";
-            Console.WriteLine(mtbInputOtgadka.Text);
-            string InputOtgadka = mtbInputOtgadka.Text;
-            for (int it = 0; it < Level; it++)
+
+            if (ScorePoint >= 1)
             {
-                char c = InputOtgadka[it]; 
-                if (char.IsDigit(c))
-                    Otgadka[it] = Convert.ToInt32(c - 48);
-            }
+                ScorePoint -= 1;
+                labelScorePoint.Text = ScorePoint + " ";
+                Console.WriteLine(mtbInputOtgadka.Text);
+                string InputOtgadka = mtbInputOtgadka.Text;
+                for (int it = 0; it < Level; it++)
+                {
+                    char c = InputOtgadka[it];
+                    if (char.IsDigit(c))
+                        Otgadka[it] = Convert.ToInt32(c - 48);
+                }
 
                 if (NumberCompare(StartNumber, Otgadka))
                 {
                     rtbChat.AppendText("Вы угадали число " + InputOtgadka + " c " + Counter + " попытки!");
-                buttonStart.Visible = true;
-                buttonPopytka.Visible = false;
-                
-                return;
+                    buttonStart.Visible = true;
+                    buttonPopytka.Visible = false;
+                    return;
                 }
-
 
                 int[,] Analyze = new int[Level, 2];
                 // угаданная цифра Analyze[i,1], бык(Analyze[i,0]=2) корова(Analyze[i,0]=1)
@@ -97,17 +102,24 @@ namespace MasterMind
                 int CountAnswer = BullsAndСows(StartNumber, Otgadka, Analyze);
 
 
-            if (CountAnswer == 0)
-            {
-                rtbChat.AppendText("Ход " + Counter + ". В Вашем числе " + InputOtgadka + " нет загаданных цифр..." + "\r\n");
-                Counter++;
-                rtbChat.ScrollToCaret();
+                if (CountAnswer == 0)
+                {
+                    rtbChat.AppendText("Ход " + Counter + ". В Вашем числе " + InputOtgadka + " нет загаданных цифр..." + "\r\n");
+                    Counter++;
+                    rtbChat.ScrollToCaret();
+                }
+                else
+                {
+                    rtbChat.AppendText("Ход " + Counter + ". Число " + InputOtgadka + ". Быки = " + Bulls + ", Коровы = " + Cows + "\r\n");
+                    Counter++;
+                    rtbChat.ScrollToCaret();
+                }
             }
             else
             {
-                rtbChat.AppendText("Ход " + Counter + ". Число " + InputOtgadka + ". Быки = " + Bulls + ", Коровы = " + Cows + "\r\n");
-                Counter++;
-                rtbChat.ScrollToCaret();
+                rtbChat.AppendText("Вы не угадали загаданное компьютером число  даже за " + Score + " предоставленных попыток..." + "\r\n");
+                buttonStart.Visible = true;
+                buttonPopytka.Visible = false;
             }
         }
 
@@ -115,22 +127,16 @@ namespace MasterMind
         {
             rtbChat.Clear();
             mtbInputOtgadka.Text = "";
-            label1.Text = "";
             GenSetN(Level, 10, StartNumber);
-
+            ScorePoint = Score;
             buttonStart.Visible = false;
             buttonPopytka.Visible = true;
-            for (int il = 0; il < Level; il++)
-            {
-                label1.Text += StartNumber[il] + " ";
-            }
             labelInputOtgadka.Visible = true;
             mtbInputOtgadka.Visible = true;
             Counter = 1;
         }
 
-        // Генератор множества Nq не повторяющихся 
-        // целых чисел в диапазоне от 0 до Nm-1 (RVA)
+        // Генератор множества Nq не повторяющихся целых чисел в диапазоне от 0 до Nm-1 (RVA)
         static void GenSetN(int Nq, int Nm, int[] qN)
         {
             Random r = new Random();
@@ -200,5 +206,6 @@ namespace MasterMind
         {
             Application.Exit();
         }
+
     }
 }
