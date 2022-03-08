@@ -77,7 +77,7 @@ namespace MasterMind
             this.ExitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(979, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(400, 24);
             this.menuStrip1.TabIndex = 21;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -137,9 +137,9 @@ namespace MasterMind
             this.panel1.Controls.Add(this.labelLevelTextDown);
             this.panel1.Controls.Add(this.labelLevelTextUp);
             this.panel1.Controls.Add(this.buttonPopytka);
-            this.panel1.Location = new System.Drawing.Point(0, 22);
+            this.panel1.Location = new System.Drawing.Point(0, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 477);
+            this.panel1.Size = new System.Drawing.Size(400, 480);
             this.panel1.TabIndex = 22;
             this.panel1.Visible = false;
             // 
@@ -260,9 +260,9 @@ namespace MasterMind
             this.panelLevelSelect.Controls.Add(this.buttonLevelMiddle);
             this.panelLevelSelect.Controls.Add(this.buttonLevelEasy);
             this.panelLevelSelect.Controls.Add(this.labelLevelSelect);
-            this.panelLevelSelect.Location = new System.Drawing.Point(479, 76);
+            this.panelLevelSelect.Location = new System.Drawing.Point(406, 20);
             this.panelLevelSelect.Name = "panelLevelSelect";
-            this.panelLevelSelect.Size = new System.Drawing.Size(372, 345);
+            this.panelLevelSelect.Size = new System.Drawing.Size(370, 350);
             this.panelLevelSelect.TabIndex = 24;
             // 
             // rtbHintHard
@@ -338,7 +338,7 @@ namespace MasterMind
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 497);
+            this.ClientSize = new System.Drawing.Size(400, 491);
             this.Controls.Add(this.panelLevelSelect);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -347,6 +347,7 @@ namespace MasterMind
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

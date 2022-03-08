@@ -8,3 +8,6 @@ E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.csproj.GenerateResourc
 E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.csproj.CoreCompileInputs.cache
 E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.exe
 E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.pdb
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\System.ValueTuple.dll
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\System.ValueTuple.xml
+E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.csproj.CopyComplete

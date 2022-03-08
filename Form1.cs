@@ -26,12 +26,15 @@ namespace MasterMind
         {
             InitializeComponent();
             panelLevelSelect.Visible = true;
+            panel1.Location = new Point(400, 20);
+            panelLevelSelect.Location = new Point(15,60);
         }
 
         private void buttonLevelEasy_Click(object sender, EventArgs e)
         {
             panelLevelSelect.Visible = false;
             panel1.Visible = true;
+            panel1.Location = new Point(0, 20);
             Level = 4;
             StartNumber = new int[Level];
             Otgadka = new int[Level];
@@ -46,6 +49,7 @@ namespace MasterMind
         {
             panelLevelSelect.Visible = false;
             panel1.Visible = true;
+            panel1.Location = new Point(0, 20);
             Level = 6;
             StartNumber = new int[Level];
             Otgadka = new int[Level];
@@ -60,6 +64,7 @@ namespace MasterMind
         {
             panelLevelSelect.Visible = false;
             panel1.Visible = true;
+            panel1.Location = new Point(0, 20);
             Level = 8;
             StartNumber = new int[Level];
             Otgadka = new int[Level];
@@ -75,7 +80,7 @@ namespace MasterMind
             Bulls = 0;
             Cows = 0;
 
-            if (ScorePoint >= 1)
+            if (ScorePoint > 1)
             {
                 ScorePoint -= 1;
                 labelScorePoint.Text = ScorePoint + " ";
