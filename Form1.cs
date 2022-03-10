@@ -26,53 +26,33 @@ namespace MasterMind
         {
             InitializeComponent();
             panelLevelSelect.Visible = true;
+            panel2.Location = new Point(0, 20);
             panel1.Location = new Point(400, 20);
             panelLevelSelect.Location = new Point(15,60);
         }
 
         private void buttonLevelEasy_Click(object sender, EventArgs e)
         {
-            panelLevelSelect.Visible = false;
-            panel1.Visible = true;
-            panel1.Location = new Point(0, 20);
             Level = 4;
-            StartNumber = new int[Level];
-            Otgadka = new int[Level];
             Score = 10;
-            labelLevel.Text = Level + " ";
-            labelScorePoint.Text = Score + " ";
             mtbInputOtgadka.Mask = "0000";
-            Counter = 1;
+            StartButton();
         }
 
         private void buttonLevelMiddle_Click(object sender, EventArgs e)
         {
-            panelLevelSelect.Visible = false;
-            panel1.Visible = true;
-            panel1.Location = new Point(0, 20);
             Level = 6;
-            StartNumber = new int[Level];
-            Otgadka = new int[Level];
             Score = 20;
-            labelLevel.Text = Level + " ";
-            labelScorePoint.Text = Score + " ";
             mtbInputOtgadka.Mask = "000000";
-            Counter = 1;
+            StartButton();
         }
 
         private void buttonLevelHard_Click(object sender, EventArgs e)
         {
-            panelLevelSelect.Visible = false;
-            panel1.Visible = true;
-            panel1.Location = new Point(0, 20);
             Level = 8;
-            StartNumber = new int[Level];
-            Otgadka = new int[Level];
             Score = 40;
-            labelLevel.Text = Level + " ";
-            labelScorePoint.Text = Score + " ";
             mtbInputOtgadka.Mask = "00000000";
-            Counter = 1;
+            StartButton();
         }
 
         private void buttonPopytka_Click(object sender, EventArgs e) //кнопка Угадать
@@ -80,7 +60,7 @@ namespace MasterMind
             Bulls = 0;
             Cows = 0;
 
-            if (ScorePoint > 1)
+            if (ScorePoint >= 1)
             {
                 ScorePoint -= 1;
                 labelScorePoint.Text = ScorePoint + " ";
@@ -130,10 +110,23 @@ namespace MasterMind
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            StartButton();
+        }
+
+        private void StartButton()
+        {
+            panelLevelSelect.Visible = false;
+            panel1.Visible = true;
+            panel1.Location = new Point(0, 20);
+            StartNumber = new int[Level];
+            Otgadka = new int[Level];
+            labelLevel.Text = Level + " ";
+            labelScorePoint.Text = Score + " ";
             rtbChat.Clear();
             mtbInputOtgadka.Text = "";
             GenSetN(Level, 10, StartNumber);
             ScorePoint = Score;
+            labelScorePoint.Text = Score + " ";
             buttonStart.Visible = false;
             buttonPopytka.Visible = true;
             labelInputOtgadka.Visible = true;
@@ -212,5 +205,23 @@ namespace MasterMind
             Application.Exit();
         }
 
+        private void referenceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Игра Быки-и-Коровы." + "\r\n" + "\r\n" +
+                "Автор - студент группы ЗП-81 Горелов Иван Александрович. " + "\r\n" + "\r\n" +
+                "Задание выбрано из списка тем, представленных для выполнения " + "\r\n" +
+                "в виде курсовой работы с использованием распределённой " + "\r\n" +
+                "системы контроля версий Github", "Справка");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(" " + + " ","Ответ =)");
+        }
     }
 }

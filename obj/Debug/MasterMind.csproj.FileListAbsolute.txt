@@ -11,3 +11,6 @@ E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.pdb
 E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\System.ValueTuple.dll
 E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\System.ValueTuple.xml
 E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.csproj.CopyComplete
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\ru-RU\MasterMind.resources.dll
+E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.Form1.ru-RU.resources
+E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\ru-RU\MasterMind.resources.dll
