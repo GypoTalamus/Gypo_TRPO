@@ -117,12 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 20</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="toolStripMenuItem1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value> </value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>399, 24</value>
   </data>
   <data name="легкаяToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 22</value>
@@ -132,6 +136,28 @@
   </data>
   <data name="сложнаяToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 22</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 410</value>
+  </data>
+  <data name="richTextBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 370</value>
+  </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Игра "Быки и Коровы".
+
+Для начала - выберите уровень сложности - Лёгкий, Обычный или Сложный.
+
+Компьютер загадает число в соответствии с правилами выбранного уровня сложности.
+
+Затем вводите число в специальное поле и нажимайте кнопку Угадать, чтобы проверить свою догадливость.
+
+При каждом новом угадывании у Вас есть определённое количество попыток. Если угадать загаданное число не удастся - не расстраивайтесь! Ведь Вы можете попытаться угадать совершенно другое число после нажатия кнопки START! =)
+
+Удачи!</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>399, 491</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

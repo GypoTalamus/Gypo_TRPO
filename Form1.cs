@@ -221,7 +221,12 @@ namespace MasterMind
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(" " + + " ","Ответ =)");
+            string Number = "";
+            for (int i = 0; i < Level; i++)
+            {
+                Number += StartNumber[i];
+            }
+            MessageBox.Show(" " + Number + " ","Ответ =)");
         }
     }
 }
