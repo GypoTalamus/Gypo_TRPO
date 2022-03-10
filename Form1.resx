@@ -199,6 +199,9 @@
   <data name="&gt;&gt;labelScoreText.Name" xml:space="preserve">
     <value>labelScoreText</value>
   </data>
+  <data name="&gt;&gt;labelInputOtgadka.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
   <data name="rtbChat.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 12pt</value>
   </data>
@@ -232,9 +235,6 @@
   <data name="&gt;&gt;labelScoreText.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;labelLevel.Name" xml:space="preserve">
-    <value>labelLevel</value>
-  </data>
   <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -267,9 +267,6 @@
   </data>
   <data name="&gt;&gt;rtbHintHard.Type" xml:space="preserve">
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;легкаяToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -948,6 +945,9 @@
   <data name="&gt;&gt;labelLevelTextDown.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1050,8 +1050,8 @@
   <data name="&gt;&gt;referenceToolStripMenuItem.Name" xml:space="preserve">
     <value>referenceToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;labelInputOtgadka.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="buttonPopytka.Text" xml:space="preserve">
+    <value>Угадать!</value>
   </data>
   <data name="menuStrip1.Text" xml:space="preserve">
     <value>menuStrip1</value>
@@ -1098,8 +1098,8 @@
   <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;labelLevel.Name" xml:space="preserve">
+    <value>labelLevel</value>
   </data>
   <data name="&gt;&gt;buttonStart.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -1146,8 +1146,8 @@
   <data name="labelScorePoint.Text" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="buttonPopytka.Text" xml:space="preserve">
-    <value>Угадать!</value>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonLevelEasy.ZOrder" xml:space="preserve">
     <value>5</value>

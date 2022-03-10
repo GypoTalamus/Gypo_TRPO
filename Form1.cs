@@ -102,7 +102,7 @@ namespace MasterMind
             }
             else
             {
-                rtbChat.AppendText("Вы не угадали загаданное компьютером число  даже за " + Score + " предоставленных попыток..." + "\r\n");
+                rtbChat.AppendText("Вы не угадали загаданное компьютером число " + NumberToString() + " даже за " + Score + " предоставленных попыток..." + "\r\n");
                 buttonStart.Visible = true;
                 buttonPopytka.Visible = false;
             }
@@ -221,12 +221,18 @@ namespace MasterMind
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            string Number = "";
+            string Number = NumberToString();
+            MessageBox.Show(" " + Number + " ","Ответ =)");
+        }
+
+        private string NumberToString()
+        {
+            string Numb = "";
             for (int i = 0; i < Level; i++)
             {
-                Number += StartNumber[i];
+                Numb += StartNumber[i];
             }
-            MessageBox.Show(" " + Number + " ","Ответ =)");
+            return Numb;
         }
     }
 }
