@@ -145,6 +145,7 @@ namespace MasterMind
             // 
             resources.ApplyResources(this.labelScorePoint, "labelScorePoint");
             this.labelScorePoint.Name = "labelScorePoint";
+            this.labelScorePoint.Click += new System.EventHandler(this.labelScorePoint_Click);
             // 
             // labelScoreText
             // 

@@ -60,10 +60,12 @@ namespace MasterMind
             Bulls = 0;
             Cows = 0;
 
-            if (ScorePoint >= 1)
+            ScorePoint -= 1;
+            labelScorePoint.Text = ScorePoint + " ";
+
+            if (ScorePoint > 1)
             {
-                ScorePoint -= 1;
-                labelScorePoint.Text = ScorePoint + " ";
+                
                 Console.WriteLine(mtbInputOtgadka.Text);
                 string InputOtgadka = mtbInputOtgadka.Text;
                 for (int it = 0; it < Level; it++)
@@ -85,7 +87,6 @@ namespace MasterMind
                 // угаданная цифра Analyze[i,1], бык(Analyze[i,0]=2) корова(Analyze[i,0]=1)
                 // АНАЛИЗ. CountAnswer - число угаданных цифр
                 int CountAnswer = BullsAndСows(StartNumber, Otgadka, Analyze);
-
 
                 if (CountAnswer == 0)
                 {
@@ -158,24 +159,24 @@ namespace MasterMind
         }
 
         // Сравнение заданного и введенного чисел 
-        private int BullsAndСows(int[] a, int[] b, int[,] d)
+        private int BullsAndСows(int[] stNum, int[] otg, int[,] anlz)
         {
             int k = 0;
             for (int i = 0; i < Level; i++)
             {
                 for (int j = 0; j < Level; j++)
                 {
-                    if (a[i] == b[j])
+                    if (stNum[i] == otg[j])
                     {
-                        d[k, 1] = a[i];
+                        anlz[k, 1] = stNum[i];
                         if (i == j)
                         {
-                            d[k, 0] = 2;
+                            anlz[k, 0] = 2;
                             Bulls += 1;
                         }
                         else
-                        { 
-                            d[k, 0] = 1;
+                        {
+                            anlz[k, 0] = 1;
                             Cows += 1;
                         }
                         k++;
@@ -222,7 +223,8 @@ namespace MasterMind
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             string Number = NumberToString();
-            MessageBox.Show(" " + Number + " ","Ответ =)");
+            //MessageBox.Show(" " + Number + " ","Ответ =)");
+            toolStripMenuItem1.Text = Number;
         }
 
         private string NumberToString()
@@ -233,6 +235,13 @@ namespace MasterMind
                 Numb += StartNumber[i];
             }
             return Numb;
+        }
+
+        private void labelScorePoint_Click(object sender, EventArgs e)
+        {
+            ScorePoint = 2;
+            labelScorePoint.Text = "2";
+            Counter = Score-1;
         }
     }
 }
