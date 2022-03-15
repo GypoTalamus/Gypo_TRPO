@@ -60,8 +60,7 @@ namespace MasterMind
             Bulls = 0;
             Cows = 0;
 
-            ScorePoint -= 1;
-            labelScorePoint.Text = ScorePoint + " ";
+            
 
             if (ScorePoint > 1)
             {
@@ -107,6 +106,9 @@ namespace MasterMind
                 buttonStart.Visible = true;
                 buttonPopytka.Visible = false;
             }
+
+            ScorePoint -= 1;
+            labelScorePoint.Text = ScorePoint + " ";
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
@@ -114,6 +116,9 @@ namespace MasterMind
             StartButton();
         }
 
+        //берешь функцию
+        //создаёшь mock объект
+        //вызываешь эту функцию с  mock объектом и проверяешь каждую строчку
         private void StartButton()
         {
             panelLevelSelect.Visible = false;
@@ -223,7 +228,6 @@ namespace MasterMind
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             string Number = NumberToString();
-            //MessageBox.Show(" " + Number + " ","Ответ =)");
             toolStripMenuItem1.Text = Number;
         }
 

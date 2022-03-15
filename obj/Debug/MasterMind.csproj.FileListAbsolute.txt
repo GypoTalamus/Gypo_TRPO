@@ -14,3 +14,11 @@ E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.csproj.CopyComplete
 E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\ru-RU\MasterMind.resources.dll
 E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\MasterMind.Form1.ru-RU.resources
 E:\My_Games\TRPO\Init_001\MasterMind\obj\Debug\ru-RU\MasterMind.resources.dll
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\Castle.Core.dll
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\Moq.dll
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\Castle.Core.xml
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\Moq.xml
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\My_Games\TRPO\Init_001\MasterMind\bin\Debug\System.Threading.Tasks.Extensions.xml
